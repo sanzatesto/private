@@ -1,1 +1,0 @@
-chrome.runtime.sendMessage({run:true});document.addEventListener("tocontent",async function(e){try{let t=e.detail;let n=await chrome.runtime.sendMessage(t);if(t.id){let e={id:t.id,data:n};document.dispatchEvent(new CustomEvent("todom",{detail:e}))}}catch{}});
